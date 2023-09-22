@@ -1,0 +1,98 @@
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: plum;
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.nav a {
+    font-size: 20px;
+    color: black;
+}
+
+main {
+    text-align: center;
+    flex: 1 0 auto;
+}
+
+.nav a i {
+    padding: 10px;
+}
+
+.title {
+    color: white;
+    background-color: rgb(255, 0, 200);
+    border-radius: 10px;
+    padding: 5px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box {
+    background-color: white;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    
+}
+
+
+.item {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px black solid;
+    min-height: 70px;
+    font-size: 20px;
+    overflow: auto;
+}
+
+.item input[type="checkbox"] {
+    margin: 20px;
+}
+
+.item p {
+    margin: 0;
+}
+
+.item input[type="checkbox"]:checked + p {
+    text-decoration: line-through;
+}
+
+.box form {
+    border-bottom: none;
+}
+
+form.item {
+    padding: 20px;
+}
+
+form.item input[type="text"] {
+    background: transparent;
+    width: auto;
+    margin-right: 10px;
+    border: transparent;
+    height: 60px;
+    width: 313px;
+    font-size: 20px;
+    text-align: center;
+    overflow: auto;
+}
+
+input[type="text"]:focus {
+    outline: none;
+}
+
+.btn {
+    border-radius: 50%;
+    font-size: 30px;
+}
+
+footer {
+    flex: 0 0 auto;
+    color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    font-size: 20px;
+}
+

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+        <script src="https://kit.fontawesome.com/1de09cd372.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="/styles/layout.css">
+        <title>Work List</title>
+    </head>
+    <body>
+        <header>
+            <nav class="nav">
+                <a class="nav-link" href="/"><i class="fa fa-home" aria-hidden="true"></i>Home</a>
+                <a class="nav-link active" aria-current="page" href="/work"><i class="fa fa-wifi" aria-hidden="true"></i>Work</a>
+            </nav>
+        </header>
+
+        <main class="container">
+            <div class="title">
+                <h1>Work List</h1>
+            </div>
+            <div class="box">
+                <% if (locals.workList.length > 0) { %>
+                    <% for( let i = 0; i < workList.length; i++ ) { %>
+                       <div class="item">
+                           <input type="checkbox">
+                           <p><%= workList[i].item %></p>
+                       </div>
+                    <% } %>
+                   <% } else { %>
+   
+                <% } %>
+                <form class="item" action="/work" method="post">
+                    <input type="text" name="item" placeholder="New Item">
+                    <button type="submit" class="btn btn-danger"><i class="fa-solid fa-plus"></i></button>
+                </form>
+
+            </div>
+        </main>
+        <footer>
+            &copy;2023
+        </footer>
+        
+    </body>
+</html>
